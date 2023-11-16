@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #0056b3; /* 현대 블루 */
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003366; /* 어두운 현대 블루 */
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #66c2ff;
+        }
+
+        /* 서브 메뉴 스타일 */
+        nav ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #003366; /* 어두운 현대 블루 */
+            padding: 10px;
+        }
+
+        nav ul ul li {
+            width: 200px;
+            white-space: nowrap;
+        }
+
+        nav ul li:hover>ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        /* 미디어 쿼리 추가 */
+        @media screen and (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            /* 햄버거 아이콘 스타일 */
+            #menu-icon {
+                display: block;
+                font-size: 24px;
+                color: #fff;
+                cursor: pointer;
+            }
+
+            #menu-icon:hover {
+                color: #66c2ff;
+            }
+
+            #menu {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                background-color: #003366; /* 어두운 현대 블루 */
+                position: absolute;
+                width: 100%;
+                top: 60px;
+            }
+
+            #menu a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #66c2ff;
+            }
+
+            /* 서브 메뉴 스타일 */
+            #menu ul ul {
+                background-color: #003366; /* 어두운 현대 블루 */
+                padding: 10px;
+            }
+
+            #menu ul ul li {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>블루드라이브</title>
+</head>
+
+<body>
+    <header>
+        <h1>블루드라이브</h1> <!-- 홈페이지 이름 변경 -->
+        <!-- 햄버거 아이콘 -->
+        <span id="menu-icon">&#9776;</span>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="home.html">홈</a>
+                    <!-- 홈의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="welcome.html">환영 메시지</a></li>
+                        <li><a href="news.html">최신 소식 및 업데이트</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html">소개</a>
+                    <!-- 소개의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="company.html">회사 소개</a></li>
+                        <li><a href="vision.html">비전과 미션</a></li>
+                        <li><a href="values.html">핵심 가치</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="models.html">모델</a>
+                    <!-- 모델의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="all-models.html">전체 모델 목록</a></li>
+                        <li><a href="model-details.html">각 모델별 상세 정보</a></li>
+                        <li><a href="pricing.html">가격 및 구매 옵션</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="technology.html">기술</a>
+                    <!-- 기술의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="main-tech.html">현대 자동차의 주요 기술 소개</a></li>
+                        <li><a href="eco-tech.html">친환경 기술</a></li>
+                        <li><a href="autonomous-tech.html">자율 주행 기술</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="news.html">뉴스</a>
+                    <!-- 뉴스의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="latest-news.html">최신 뉴스 기사</a></li>
+                        <li><a href="promotions.html">프로모션 및 할인 소식</a></li>
+                        <li><a href="brand-events.html">브랜드 이벤트 소식</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="events.html">이벤트</a>
+                    <!-- 이벤트의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="upcoming-events.html">예정된 이벤트 정보</a></li>
+                        <li><a href="past-events.html">지난 이벤트 리뷰</a></li>
+                        <li><a href="how-to-join.html">참여 방법 및 혜택</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="gallery.html">갤러리</a>
+                    <!-- 갤러리의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="photo-gallery.html">사진 갤러리</a></li>
+                        <li><a href="video-gallery.html">동영상 갤러리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="customer-support.html">고객 지원</a>
+                    <!-- 고객 지원의 서브 메뉴 -->
+                    <ul>
+                        <li><a href="service-centers.html">서비스 센터 위치</a></li>
+                        <li><a href="service-programs.html">서비스 프로그램 정보</a></li>
+                        <li><a href="faq.html">자주 묻는 질문 (FAQ)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2>현대 자동차의 현존하는 기술과 모델</h2>
+        <p>블루드라이브에서는 현대 자동차의 최신 기술과 다양한 모델을 제공하고 있습니다. 어떤 차종을 찾으시나요?</p>
+        <img src="D:\학생용폴더\현대.jpg">
+    </section>
+
+    <footer>
+        <p>&copy; 2023 블루드라이브. 모든 권리 보유.</p>
+    </footer>
+
+    <script>
+        // 햄버거 아이콘 클릭 시 메뉴 토글
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var menu = document.getElementById('menu');
+            menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'flex' : 'none';
+        });
+    </script>
+</body>
+
+</html>
